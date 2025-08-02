@@ -16,36 +16,47 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
       flex-direction: column;
+      min-height: 100vh;
+      padding: 20px;
     }
 
     .logo {
       margin-top: 20px;
-      width: 90px;
+      width: 100px;
       border-radius: 10px;
     }
 
     .container {
       margin-top: 30px;
-      width: 90%;
-      max-width: 400px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 15px;
+      width: 100%;
+      max-width: 400px;
     }
 
     .box {
       background: #ffffff;
       border-radius: 20px;
-      padding: 20px;
       text-align: center;
       color: #4b2e83;
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 600;
       text-decoration: none;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       transition: all 0.3s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 0;
+      padding-bottom: 100%; /* makes the box a square */
+      position: relative;
+    }
+
+    .box span {
+      position: absolute;
+      width: 80%;
     }
 
     .box:hover {
@@ -55,21 +66,21 @@
 
     @media (max-width: 500px) {
       .container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Replace with your actual logo path -->
+  <!-- Replace with your actual image path or URL -->
   <img src="c31384f8-f18c-46d5-9a0a-d7f6bf44b380.png" alt="NSK Logo" class="logo" />
 
   <div class="container">
-    <a class="box" href="https://nskumbar.art" target="_blank">🌐 Website</a>
-    <a class="box" href="https://maps.app.goo.gl/vEEHjFCBUHsyA7Je9" target="_blank">📍 Location</a>
-    <a class="box" href="https://instagram.com/nskumbarartacademy" target="_blank">📱 Instagram</a>
-    <a class="box" href="tel:+919148997727">☎️ Call Us</a>
+    <a class="box" href="https://nskumbar.art" target="_blank"><span>🌐 Website</span></a>
+    <a class="box" href="https://maps.app.goo.gl/vEEHjFCBUHsyA7Je9" target="_blank"><span>📍 Location</span></a>
+    <a class="box" href="https://instagram.com/nskumbarartacademy" target="_blank"><span>📱 Instagram</span></a>
+    <a class="box" href="tel:+919148997727"><span>☎️ Call Us</span></a>
   </div>
 
 </body>
