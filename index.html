@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>NS Kumbar Art - Quick Links</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -42,7 +40,7 @@
       text-align: center;
       text-decoration: none;
       height: 0;
-      padding-bottom: 100%; /* Square shape */
+      padding-bottom: 100%;
       position: relative;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
       transition: transform 0.2s ease;
@@ -71,6 +69,56 @@
       font-weight: 500;
     }
 
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 300px;
+      text-align: center;
+    }
+
+    .modal-content h3 {
+      margin-top: 0;
+      color: #4b2e83;
+    }
+
+    .modal-content a {
+      display: block;
+      margin: 10px 0;
+      color: #4b2e83;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .modal-content a:hover {
+      text-decoration: underline;
+    }
+
+    .close-btn {
+      background: #4b2e83;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+
     @media (max-width: 500px) {
       .container {
         grid-template-columns: 1fr 1fr;
@@ -78,13 +126,12 @@
     }
   </style>
 
-  <!-- Font Awesome Icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 
-  <!-- NSK Logo -->
-<img src="https://raw.githubusercontent.com/vidhyaShree1210/qr-links/main/logo.png" alt="NSK Logo" class="logo" />
+  <!-- Logo -->
+  <img src="logo.jpg" alt="NSK Logo" class="logo" />
 
   <div class="container">
     <a class="box" href="https://wa.me/919148997727" target="_blank">
@@ -99,12 +146,13 @@
         <span>Website</span>
       </div>
     </a>
-    <a class="box" href="https://maps.app.goo.gl/vEEHjFCBUHsyA7Je9" target="_blank">
+    <!-- LOCATION BOX -->
+    <div class="box" onclick="openModal()">
       <div class="box-content">
         <i class="fas fa-map-marker-alt"></i>
         <span>Location</span>
       </div>
-    </a>
+    </div>
     <a class="box" href="https://instagram.com/nskumbarartacademy" target="_blank">
       <div class="box-content">
         <i class="fab fa-instagram"></i>
@@ -113,8 +161,28 @@
     </a>
   </div>
 
+  <!-- MODAL -->
+  <div class="modal" id="locationModal">
+    <div class="modal-content">
+      <h3>Select Branch</h3>
+      <a href="https://maps.app.goo.gl/6z6PrtmXi8Jvdm2a6" target="_blank">Vijaynagar</a>
+      <a href="https://maps.app.goo.gl/U9wCL2q2hBaCrqyN9" target="_blank">Jindalnagar</a>
+      <a href="https://maps.app.goo.gl/hpwZ165BUxoxSc4u9" target="_blank">Tatanagar</a>
+      <a href="https://maps.app.goo.gl/y6LvZPjadN73AwKW9" target="_blank">MEI Layout</a>
+      <a href="#" onclick="alert('Malleswaram coming soon')">Malleswaram</a>
+      <button class="close-btn" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script>
+    function openModal() {
+      document.getElementById("locationModal").style.display = "flex";
+    }
+    function closeModal() {
+      document.getElementById("locationModal").style.display = "none";
+    }
+  </script>
+
 </body>
 </html>
-
-
-
