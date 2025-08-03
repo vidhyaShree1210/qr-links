@@ -19,11 +19,11 @@
       padding: 20px;
     }
 
-  .logo {
-  width: 250px;  /* or even 180px or 200px */
-  border-radius: 20px;
-  margin-bottom: 35px;
-}
+    .logo {
+      width: 250px;
+      border-radius: 20px;
+      margin-bottom: 35px;
+    }
 
     .container {
       display: grid;
@@ -55,6 +55,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      width: 85%;
     }
 
     .box-content i {
@@ -66,7 +67,15 @@
     .box-content span {
       display: block;
       font-size: 14px;
-      font-weight: 500;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .box-content small {
+      display: block;
+      font-size: 11px;
+      font-weight: 400;
+      line-height: 1.3;
     }
 
     /* Modal styles */
@@ -134,37 +143,39 @@
   <img src="logo.png" alt="NSK Logo" class="logo" />
 
   <div class="container">
+    <!-- WhatsApp -->
     <a class="box" href="https://wa.me/9663923303" target="_blank">
       <div class="box-content">
         <i class="fab fa-whatsapp"></i>
-        <span>WhatsApp 
-Connect on WhatsApp
-(Instantly reach us for enquiries, batch details, and registrations.)</span>
+        <span>WhatsApp</span>
+        <small>Instantly reach us for enquiries,<br>batch details, and registrations.</small>
       </div>
     </a>
+
+    <!-- Website -->
     <a class="box" href="https://nskumbar.art" target="_blank">
       <div class="box-content">
         <i class="fas fa-globe"></i>
-        <span>Website
-        Know About Our Art Courses
-(Explore drawing, painting, exclusive courses)</span>
+        <span>Website</span>
+        <small>Explore drawing, painting, and exclusive<br>courses on our official website.</small>
       </div>
     </a>
-    <!-- LOCATION BOX -->
+
+    <!-- Location -->
     <div class="box" onclick="openModal()">
       <div class="box-content">
         <i class="fas fa-map-marker-alt"></i>
-        <span>Location
-        Know Where We Are Located
-(Find all NS Kumbar Art branches near you in Bangalore)</span>
+        <span>Location</span>
+        <small>Find all NS Kumbar Art branches<br>near you in Bangalore.</small>
       </div>
     </div>
+
+    <!-- Instagram -->
     <a class="box" href="https://instagram.com/nskumbarartacademy" target="_blank">
       <div class="box-content">
         <i class="fab fa-instagram"></i>
-        <span>Instagram
-        Join Us on Social Media
-(Follow us for updates, student artworks, events, and competitions)</span>
+        <span>Instagram</span>
+        <small>Follow us for updates, student artworks,<br>events, and competitions.</small>
       </div>
     </a>
   </div>
@@ -173,12 +184,12 @@ Connect on WhatsApp
   <div class="modal" id="locationModal">
     <div class="modal-content">
       <h3>Select Branch</h3>
-      <a href="https://maps.app.goo.gl/6z6PrtmXi8Jvdm2a6" target="_blank">NSK-Vijaynagar</a>
-      <a href="https://maps.app.goo.gl/U9wCL2q2hBaCrqyN9" target="_blank">NSK-Jindalnagar</a>
-      <a href="https://maps.app.goo.gl/hpwZ165BUxoxSc4u9" target="_blank">NSK-Tatanagar</a>
-      <a href="https://maps.app.goo.gl/y6LvZPjadN73AwKW9" target="_blank">NSK-MEI Layout</a>
-       <a href="https://maps.app.goo.gl/fHY8U1m2dGHJFfmu7" target="_blank">NSK-Horamavu</a>
-       <a href="https://maps.app.goo.gl/q4aozHpjWpumsb3G7" target="_blank">NSK ART ( adults and advanced art courses) - Malleshwaram</a>
+      <a href="https://maps.app.goo.gl/6z6PrtmXi8Jvdm2a6" target="_blank">NSK - Vijaynagar</a>
+      <a href="https://maps.app.goo.gl/U9wCL2q2hBaCrqyN9" target="_blank">NSK - Jindalnagar</a>
+      <a href="https://maps.app.goo.gl/hpwZ165BUxoxSc4u9" target="_blank">NSK - Tatanagar</a>
+      <a href="https://maps.app.goo.gl/y6LvZPjadN73AwKW9" target="_blank">NSK - MEI Layout</a>
+      <a href="https://maps.app.goo.gl/fHY8U1m2dGHJFfmu7" target="_blank">NSK - Horamavu</a>
+      <a href="https://maps.app.goo.gl/q4aozHpjWpumsb3G7" target="_blank">NSK Advanced Art - Malleshwaram</a>
       <button class="close-btn" onclick="closeModal()">Close</button>
     </div>
   </div>
@@ -195,8 +206,3 @@ Connect on WhatsApp
 
 </body>
 </html>
-
-
-
-
-
