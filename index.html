@@ -4,6 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>NS Kumbar Art - Quick Links</title>
+
+  <!-- Contrail One Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Contrail+One&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
   <style>
     * {
       box-sizing: border-box;
@@ -11,7 +18,7 @@
 
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Contrail One', cursive;
       background: #f4e9f8;
       display: flex;
       flex-direction: column;
@@ -74,7 +81,7 @@
 
     .box-content p {
       font-size: 12px;
-      font-family: 'Comic Sans MS', 'Segoe UI', cursive;
+      font-family: 'Contrail One', cursive;
       line-height: 1.4;
       color: white;
       margin: 0;
@@ -101,6 +108,7 @@
       width: 90%;
       max-width: 300px;
       text-align: center;
+      font-family: 'Contrail One', cursive;
     }
 
     .modal-content h3 {
@@ -128,6 +136,7 @@
       border-radius: 8px;
       margin-top: 15px;
       cursor: pointer;
+      font-family: 'Contrail One', cursive;
     }
 
     @media (max-width: 500px) {
@@ -136,15 +145,13 @@
       }
     }
   </style>
-
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 
   <!-- Logo -->
   <img src="logo.png" alt="NSK Logo" class="logo" />
 
-  <!-- 4 Boxes -->
+  <!-- 4 Cards -->
   <div class="container">
     <!-- WhatsApp -->
     <a class="box" href="https://wa.me/9663923303" target="_blank">
@@ -159,12 +166,12 @@
     <a class="box" href="https://nskumbar.art" target="_blank">
       <div class="box-content">
         <i class="fas fa-globe"></i>
-        <h3>Know About Our Courses</h3>
+        <h3>Know Our Courses</h3>
         <p>(Explore drawing, painting,<br>exclusive programs)</p>
       </div>
     </a>
 
-    <!-- Location -->
+    <!-- Location (Opens Modal) -->
     <div class="box" onclick="openModal()">
       <div class="box-content">
         <i class="fas fa-map-marker-alt"></i>
@@ -177,7 +184,7 @@
     <a class="box" href="https://instagram.com/nskumbarartacademy" target="_blank">
       <div class="box-content">
         <i class="fab fa-instagram"></i>
-        <h3>Follow Us on Instagram</h3>
+        <h3>Follow on Instagram</h3>
         <p>(See artworks, events,<br>and student highlights)</p>
       </div>
     </a>
@@ -197,7 +204,7 @@
     </div>
   </div>
 
-  <!-- JS for Modal -->
+  <!-- JS -->
   <script>
     function openModal() {
       document.getElementById("locationModal").style.display = "flex";
